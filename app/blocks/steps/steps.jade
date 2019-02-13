@@ -1,0 +1,33 @@
+include ../icon/icon
+
+mixin steps()
+	section.steps&attributes(attributes)
+		.steps__in
+			ul.steps__list
+				li.steps__step.step.step_1
+					.step__top
+						+icon('ball', true).step__number
+						+icon('step-1', true).step__icon
+					.step__text 
+						strong Получаете 
+						| <br/>у руководителя чемпионата<br/>
+						strong «Карту Баскетболиста»
+				li.steps__step.step.step_2
+					.step__top
+						+icon('ball', true).step__number
+						+icon('step-2', true).step__icon
+					.step__text 
+						a(href="#") Регистрируетесь на сайте <br/>МЛБЛ
+				li.steps__step.step.step_3
+					.step__top
+						+icon('ball', true).step__number
+						+icon('step-3', true).step__icon
+					.step__text 
+						a(href="#") Активируете карту на сайте
+				li.steps__step.step.step_4
+					.step__top
+						+icon('ball', true).step__number
+						+icon('step-4', true).step__icon
+					.step__text Получаете 
+						strong доступ ко всем <br/>уникальным предложениям 
+						|  от <br/>партнеров МЛБЛ и «Карты Баскетболиста»

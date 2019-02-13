@@ -1,0 +1,26 @@
+extends /blocks/layout-default/layout-default
+
+include /blocks/basketcard/basketcard
+include /blocks/principle/principle
+include /blocks/steps/steps
+include /blocks/what/what
+include /blocks/testimonials/testimonials
+include /blocks/tell/tell
+include /blocks/partners/partners
+include /blocks/how/how
+include /blocks/news/news
+
+
+block head
+	- var pageTitle = 'ilovebasket.ru';
+
+block content
+	+basketcard()
+	+principle()
+	+steps()
+	+what()
+	+testimonials()
+	+tell()
+	+partners()
+	+how()
+	+news()

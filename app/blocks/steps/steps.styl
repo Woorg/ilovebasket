@@ -1,0 +1,89 @@
+.steps
+	&__in
+		@extends .in
+		padding-top $pV
+		padding-bottom $pV
+	&__list
+		display flex
+		align-items flex-start
+		flex-flow row wrap
+		counter-reset step
+	&__step	
+		max-width 285px
+		width 100%
+
+.step
+	&__top
+		position relative
+		margin-bottom 18px
+		height 80px
+		&:before
+			position absolute
+			z-index 1
+			top 0
+			left 0	
+			width 80px
+			height 80px
+			counter-increment step
+			content counter(step)
+			color #ec5b1c
+			font-size 55px
+			text-align center
+			line-height 80px
+	&__icon
+		position absolute
+		top 0
+		right 0
+	&__number
+		position absolute
+		top 0
+		left 0
+		width 80px
+		height 80px
+		border-radius 50%
+
+	&__text
+		opacity .95
+		color #313131
+		font-family $p
+		font-weight normal
+		line-height 1.5
+		letter-spacing 0.18px
+		strong 
+			font-family $pS
+			font-weight 600
+			letter-spacing 0.17px
+		a
+			color #108cdf
+			font-family $pS
+			font-weight 600
+			letter-spacing 0.17px
+			text-decoration none
+			&:hover
+				text-decoration none
+
+
+.step_1
+	.step__icon
+		top 13px
+		left 62px
+		width 84px
+		height 55px
+.step_2
+	.step__icon
+		top 4px
+		left 78px
+		width 53px
+		height 70px
+.step_3
+	.step__icon
+		top 10px
+		left 70px
+		width 68px
+		height 59px
+.step_4
+	.step__icon
+		top 10px
+		left 70px
+		width 68px
+		height 68px

@@ -1,0 +1,182 @@
+.testimonials
+	&__in
+		@extends .in
+		padding-top $pV
+		padding-bottom $pV
+
+	&__title
+		margin-bottom 19px
+		// margin-bottom 38px
+		text-align center
+
+	// &__list
+	// 	display flex
+	// 	flex-flow row
+
+	&__item
+		position relative
+		padding-top 40px
+		padding-right 40px
+		padding-bottom 40px
+		padding-left 40px
+		background-color #ffffff
+		box-shadow 0 8px 16px rgba(120, 119, 119, 0.24)
+		border-radius 4px
+		transform scale(1)
+	&__link
+		text-decoration none
+		color inherit
+
+	// .slick-list
+	// 	min-height 429px
+
+	.slick-slide
+		position relative
+		// margin-top 38px
+		padding-top 38px
+		padding-bottom 38px
+		width 426px
+		.testimonials__item
+			// height 223px
+			filter blur(2px)
+			transform scale(.9)
+			tr(transform .3s ease)
+
+	.slick-current
+		.testimonials__item
+			position absolute
+			z-index 1
+
+			top 0
+			left -46px
+			left 50%
+			// right -46px
+			width 570px !important
+			transform scale(1) translateX(-50%)
+			filter blur(0)
+			tr(transform .3s ease)
+
+			.testimonials__top
+				position relative
+				margin-bottom 18px
+				font-family $pS
+			.testimonials__item-title
+				margin-bottom 3px
+				color #313131
+				font-size 24px
+				font-weight 600
+				letter-spacing 0.3px
+				line-height 1.333
+			.testimonials__date
+				position absolute
+				top 8px
+				right 0
+				font-size 12px
+				font-weight 600
+				letter-spacing 0.15px
+				line-height 1.333
+			.testimonials__text
+				max-height 140px
+
+
+	&__text
+		max-height 80px
+		overflow hidden
+		opacity 0.8
+		font-size 16px
+		font-weight 400
+		letter-spacing 0.1px
+		line-height 1.75
+
+	&__top
+		position relative
+		margin-bottom 18px
+		font-family $pS
+	&__item-title
+		margin-bottom 3px
+		color #313131
+		font-size 24px
+		font-weight 600
+		letter-spacing 0.3px
+		line-height 1.333
+	&__date
+		position absolute
+		top 8px
+		right 0
+		font-size 12px
+		font-weight 600
+		letter-spacing 0.15px
+		line-height 1.333
+	// &__rating
+
+
+	&__text
+		opacity 0.8
+		font-size 16px
+		font-weight 400
+		letter-spacing 0.1px
+		line-height 1.75
+
+	.slick-arrow,
+	&__arrow
+		width 16px
+		height 32px
+		&:before
+			display none
+	.slick-next,
+	&__next
+		right 30px
+	.slick-prev,
+	&__prev
+		z-index 1
+		left 30px
+		transform rotate(180deg)
+
+	.slick-dots
+		li
+			position relative
+			border 1px solid transparent
+			width 18px
+			height 18px
+			border-radius 50%
+			background #fff
+			button
+				position absolute
+				top 50%
+				left 50%
+				border 0px solid transparent
+				width 0px
+				height 0px
+				background-color #f5861f
+				opacity 0.5
+				border-radius 50%
+				transform translate(-50%, -50%)
+				&:before
+					display none
+
+			&.slick-active
+				border 1px solid #ec5b1c
+				background #fff
+
+				button
+					border 3px solid #fff
+					width 16px
+					height 16px
+					background-color #ec5b1c
+					opacity 1
+.rating
+	display flex
+	flex-flow row 
+	justify-content flex-start
+	align-items center
+	&__star
+		margin-right 16px
+		width 16px
+		height 15px
+		// opacity 0.5
+	&__num
+		margin-left 8px
+		color #ec5b1c
+		font-size 19px
+		font-weight 700
+		letter-spacing 0.24px

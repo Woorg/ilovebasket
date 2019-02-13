@@ -1,0 +1,50 @@
+.form
+	text-align left
+	&__row
+		margin-bottom 24px
+		display flex
+		&:last-child
+			margin-bottom 0
+		
+	&__field
+		flex 1 1 370px
+		input,
+		textarea
+			padding-top 16px
+			padding-right 15px
+			padding-bottom 16px
+			padding-left 15px
+			width 100%
+			border-radius 4px
+			border 1px solid #ced4da
+			background-color #f4f4f4
+
+			opacity 0.4
+			font-family $pS
+			font-weight 600
+			letter-spacing 0.1px
+			+placeholder()
+				opacity 1
+
+	&__field_num
+		margin-left 24px
+		flex-basis 96px
+	&__field_message
+		textarea
+			min-height 150px
+
+
+	&__label
+		cursor pointer
+	&__label-text
+		margin-bottom 2px
+		font-size 16px
+		font-weight 400
+		letter-spacing 0.1px
+		span 
+			padding-left 3px
+			color #ced4da
+
+	&__submit
+		margin auto
+		width 240px

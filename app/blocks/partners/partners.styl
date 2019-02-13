@@ -1,0 +1,96 @@
+.partners
+	&__in
+		@extends .in
+		padding-top $pV
+		padding-bottom $pV
+		text-align center	
+	&__title
+		margin-bottom 25px
+	// &__list
+
+	&__item
+		padding-bottom 27px
+
+	&__partner
+		position relative
+		height 200px
+		img
+			position absolute
+			top 50%
+			left 50%
+			transform translate(-50%, -50%)
+
+	&__partner-text
+		opacity 0.95
+		font-family $pS
+		font-size 19px
+		font-weight 600
+		letter-spacing 0.24px
+		line-height 1.68
+		text-transform uppercase
+
+	&__text
+		padding-top 30px
+		margin-bottom 30px
+		opacity 0.95
+		color #ec5b1c
+		font-family $pS
+		font-weight 600
+		letter-spacing 0.3px
+		span 
+			font-family $pBl
+			font-weight 900
+	&__button
+		margin auto
+		width 240px
+
+	.slick-arrow
+		top calc(50% - 40px)
+
+	.slick-arrow,
+	&__arrow
+		width 16px
+		height 32px
+		&:before
+			display none
+	.slick-next,
+	&__next
+		right 30px
+	.slick-prev,
+	&__prev
+		z-index 1
+		left 30px
+		transform rotate(180deg)
+
+	.slick-dots
+		li
+			position relative
+			border 1px solid transparent
+			width 18px
+			height 18px
+			border-radius 50%
+			background #fff
+			button
+				position absolute
+				top 50%
+				left 50%
+				border 0px solid transparent
+				width 0px
+				height 0px
+				background-color #f5861f
+				opacity 0.5
+				border-radius 50%
+				transform translate(-50%, -50%)
+				&:before
+					display none
+
+			&.slick-active
+				border 1px solid #ec5b1c
+				background #fff
+
+				button
+					border 3px solid #fff
+					width 16px
+					height 16px
+					background-color #ec5b1c
+					opacity 1

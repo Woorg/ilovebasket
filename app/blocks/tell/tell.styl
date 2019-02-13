@@ -1,0 +1,66 @@
+.tell
+	background-color #f4f4f4
+	&__in
+		@extends .in
+		padding-top $pV
+		padding-bottom $pV
+		text-align center
+
+	&__title,
+	&__text
+		margin auto
+		max-width 760px 
+
+	&__title
+		margin-bottom 17px
+		font-family $pS
+		font-size 24px
+		line-height 1.3
+		letter-spacing 0.3px
+		opacity 0.95
+
+	&__text
+		margin-bottom 24px
+		opacity 0.8
+		font-size 16px
+		font-weight 400
+		letter-spacing 0.1px
+		line-height 1.75
+		text-align center
+
+	&__form
+		margin auto
+		padding 40px
+		max-width 570px
+		width 100%
+		// height 531px
+		background-color #ffffff
+		box-shadow 0 8px 16px rgba(120, 119, 119, 0.24)
+		border-radius 4px
+
+	&__form-title,
+	&__form-note
+		text-align center
+
+	&__form-title
+		margin-bottom 15px
+		opacity 0.95
+		font-family $pS
+		font-size 24px
+		font-weight 600
+		letter-spacing 0.3px
+		line-height 1.33333333333333
+	&__form-note
+		margin-bottom 22px
+		opacity 0.8
+		font-size 16px
+		line-height 1.75
+		a
+			padding-left 7px
+			color #108cdf
+			font-family $pS
+			font-weight 600
+			letter-spacing 0.17px
+			text-decoration none
+			&:hover
+				text-decoration underline
