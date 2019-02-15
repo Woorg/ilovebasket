@@ -116,7 +116,8 @@ import imagesLoaded from 'imagesloaded/imagesloaded.pkgd.min.js';
 				arrows: false,
 				fade: true,
 				slidesToShow: 1,
-				initialSlide: 0
+				initialSlide: 0,
+				adaptiveHeight: true
 				// more settings
 			}
 			
