@@ -8,10 +8,12 @@
 			padding-bottom 20px
 	&__list
 		display flex
-		justify-content center
+		justify-content flex-start
 		align-items flex-start
 		flex-flow row wrap
 		counter-reset step
+		+r($tM)
+			justify-content center
 	&__step
 		max-width 285px
 		width 100%
