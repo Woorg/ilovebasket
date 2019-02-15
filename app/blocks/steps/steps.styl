@@ -3,15 +3,56 @@
 		@extends .in
 		padding-top $pV
 		padding-bottom $pV
+		+r($tM)
+			padding-top 20px
+			padding-bottom 20px
 	&__list
 		display flex
+		justify-content center
 		align-items flex-start
 		flex-flow row wrap
 		counter-reset step
-	&__step	
+	&__step
 		max-width 285px
 		width 100%
+		+r($tM)
+			text-align left
 
+	.slick-current
+		+r($tM)
+			text-align center
+
+	.slick-dots
+		li
+			position relative
+			border 1px solid transparent
+			width 18px
+			height 18px
+			border-radius 50%
+			background #fff
+			button
+				position absolute
+				top 50%
+				left 50%
+				border 0px solid transparent
+				width 0px
+				height 0px
+				background-color #f5861f
+				opacity 0.5
+				border-radius 50%
+				transform translate(-50%, -50%)
+				&:before
+					display none
+
+			&.slick-active
+				border 1px solid #ec5b1c
+				background #fff
+				button
+					border 3px solid #fff
+					width 16px
+					height 16px
+					background-color #ec5b1c
+					opacity 1
 .step
 	&__top
 		position relative
@@ -21,7 +62,7 @@
 			position absolute
 			z-index 1
 			top 0
-			left 0	
+			left 0
 			width 80px
 			height 80px
 			counter-increment step
@@ -49,7 +90,7 @@
 		font-weight normal
 		line-height 1.5
 		letter-spacing 0.18px
-		strong 
+		strong
 			font-family $pS
 			font-weight 600
 			letter-spacing 0.17px

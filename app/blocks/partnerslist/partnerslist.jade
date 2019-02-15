@@ -1,0 +1,217 @@
+include ../form/form
+
+mixin partnerslist()
+	section.partnerslist&attributes(attributes)
+		.partnerslist__in
+			h2.partnerslist__title.title Список партнеров
+			+form-select().partnerslist__form
+			ul.partnerslist__list
+				li.partnerslist__partner.partner
+					.partner__top
+						.partner__brand
+							img.partner__brand-logo(src="assets/images/content/partner-small-1.png", alt="Москомспорт")
+							.partner__brand-text Москомспорт
+
+					.partner__w
+						.partner__images
+							.grid-sizer
+							.gutter-sizer
+							a.partner__images-link(href="assets/images/content/list-img-1.jpg" )
+								img(src="assets/images/content/list-img-1.jpg", alt="")
+							a.partner__images-link(href="assets/images/content/list-img-2.jpg" )
+								img(src="assets/images/content/list-img-2.jpg", alt="")
+							a.partner__images-link.partner__images-link_stamp.partner__images-link_height(href="assets/images/content/list-img-3.jpg" )
+								img(src="assets/images/content/list-img-3.jpg", alt="")
+						
+						.partner__content
+							.partner__city Россия
+							.partner__text
+								.partner__text-title Описание:
+								p Etiam auctor tincidunt purus non gravida. Curabitur ut massa eros. Curabitur nibh dolor, facilisis vitae dignissim a, congue eu justo. Fusce accumsan blandit mi, eu euismod orci vestibulum non. Suspendisse imperdiet, urna eget viverra malesuada, lectus urna finibus sem, sed dignissim nisl arcu porttitor enim. Proin nec metus justo. Etiam blandit, ante et dignissim scelerisque, purus eros vulputate dui, sed dictum velit arcu rutrum magna. Nullam nisi lectus, placerat eu volutpat vitae, accumsan sed lacus. In interdum aliquam enim sit amet ultricies.
+					.partner__cond
+						.partner__cond-title Спец. условия:
+						ul.partner__cond-list
+							li.partner__cond-item Nulla rutrum nulla in urna pulvinar
+							li.partner__cond-item Sed id semper massa, ut consequat turpis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+
+
+					.partner__hotdeal Горячее предложение: 
+						span
+							i скидка 10% 
+							|  на все товары
+
+					.partner__team
+						.partner__team-photo
+							a.partner__team-link(href="assets/images/content/team-1.jpg")
+								img(src="assets/images/content/team-1.jpg", alt="")
+
+						dl.partner__team-list
+							.partner__team-w
+								dt.partner__team-term Основатель:
+								dd.partner__team-desc Иван Иванович Иванов
+
+							.partner__team-w
+								dt.partner__team-term Должность:
+								dd.partner__team-desc защитник
+
+							.partner__team-w
+								dt.partner__team-term Команда:
+								dd.partner__team-desc Нью-Орлеан Пеликанс
+
+
+				li.partnerslist__partner.partner
+					.partner__top
+						.partner__brand
+							img.partner__brand-logo(src="assets/images/content/partner-small-2.png", alt="Москомспорт")
+							.partner__brand-text АСБ
+
+					.partner__w
+						.partner__images
+							.grid-sizer
+							.gutter-sizer
+							a.partner__images-link(href="assets/images/content/list-img-1.jpg" )
+								img(src="assets/images/content/list-img-1.jpg", alt="")
+							a.partner__images-link(href="assets/images/content/list-img-2.jpg" )
+								img(src="assets/images/content/list-img-2.jpg", alt="")
+							a.partner__images-link.partner__images-link_stamp.partner__images-link_height(href="assets/images/content/list-img-3.jpg" )
+								img(src="assets/images/content/list-img-3.jpg", alt="")
+
+						.partner__content
+							.partner__city Россия, Абаза
+							.partner__text
+								.partner__text-title Описание:
+								p Etiam auctor tincidunt purus non gravida. Curabitur ut massa eros. Curabitur nibh dolor, facilisis vitae dignissim a, congue eu justo. Fusce accumsan blandit mi, eu euismod orci vestibulum non. Suspendisse imperdiet, urna eget viverra malesuada, lectus urna finibus sem, sed dignissim nisl arcu porttitor enim. Proin nec metus justo. Etiam blandit, ante et dignissim scelerisque, purus eros vulputate dui, sed dictum velit arcu rutrum magna. Nullam nisi lectus, placerat eu volutpat vitae, accumsan sed lacus. In interdum aliquam enim sit amet ultricies.
+					.partner__cond
+						.partner__cond-title Спец. условия:
+						ul.partner__cond-list
+							li.partner__cond-item Nulla rutrum nulla in urna pulvinar
+							li.partner__cond-item Sed id semper massa, ut consequat turpis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+
+
+					.partner__hotdeal Горячее предложение:
+						span
+							i скидка 10%
+							| на все товары
+
+					.partner__team
+						.partner__team-photo
+							a.partner__team-link(href="assets/images/content/team-1.jpg")
+								img(src="assets/images/content/team-1.jpg", alt="")
+
+						dl.partner__team-list
+							.partner__team-w
+								dt.partner__team-term Основатель:
+								dd.partner__team-desc Иван Иванович Иванов
+
+							.partner__team-w
+								dt.partner__team-term Должность:
+								dd.partner__team-desc защитник
+
+							.partner__team-w
+								dt.partner__team-term Команда:
+								dd.partner__team-desc Нью-Орлеан Пеликанс
+
+				li.partnerslist__partner.partner
+					.partner__top
+						.partner__brand
+							img.partner__brand-logo(src="assets/images/content/partner-small-1.png", alt="Москомспорт")
+							.partner__brand-text Москомспорт
+
+					.partner__w
+						.partner__images
+							.grid-sizer
+							.gutter-sizer
+							a.partner__images-link(href="assets/images/content/list-img-1.jpg" )
+								img(src="assets/images/content/list-img-1.jpg", alt="")
+							a.partner__images-link(href="assets/images/content/list-img-2.jpg" )
+								img(src="assets/images/content/list-img-2.jpg", alt="")
+							a.partner__images-link.partner__images-link_stamp.partner__images-link_height(href="assets/images/content/list-img-3.jpg" )
+								img(src="assets/images/content/list-img-3.jpg", alt="")
+
+						.partner__content
+							.partner__city Россия
+							.partner__text
+								.partner__text-title Описание:
+								p Etiam auctor tincidunt purus non gravida. Curabitur ut massa eros. Curabitur nibh dolor, facilisis vitae dignissim a, congue eu justo. Fusce accumsan blandit mi, eu euismod orci vestibulum non. Suspendisse imperdiet, urna eget viverra malesuada, lectus urna finibus sem, sed dignissim nisl arcu porttitor enim. Proin nec metus justo. Etiam blandit, ante et dignissim scelerisque, purus eros vulputate dui, sed dictum velit arcu rutrum magna. Nullam nisi lectus, placerat eu volutpat vitae, accumsan sed lacus. In interdum aliquam enim sit amet ultricies.
+					.partner__cond
+						.partner__cond-title Спец. условия:
+						ul.partner__cond-list
+							li.partner__cond-item Nulla rutrum nulla in urna pulvinar
+							li.partner__cond-item Sed id semper massa, ut consequat turpis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+
+
+					.partner__hotdeal Горячее предложение:
+						span
+							i скидка 10%
+							| на все товары
+
+					.partner__team
+						.partner__team-photo
+							a.partner__team-link(href="assets/images/content/team-1.jpg")
+								img(src="assets/images/content/team-1.jpg", alt="")
+
+						dl.partner__team-list
+							.partner__team-w
+								dt.partner__team-term Основатель:
+								dd.partner__team-desc Иван Иванович Иванов
+
+							.partner__team-w
+								dt.partner__team-term Должность:
+								dd.partner__team-desc защитник
+
+							.partner__team-w
+								dt.partner__team-term Команда:
+								dd.partner__team-desc Нью-Орлеан Пеликанс
+
+
+				li.partnerslist__partner.partner
+					.partner__top
+						.partner__brand
+							img.partner__brand-logo(src="assets/images/content/partner-small-2.png", alt="Москомспорт")
+							.partner__brand-text АСБ
+
+					.partner__w
+						.partner__images
+							.grid-sizer
+							.gutter-sizer
+							a.partner__images-link(href="assets/images/content/list-img-1.jpg" )
+								img(src="assets/images/content/list-img-1.jpg", alt="")
+							a.partner__images-link(href="assets/images/content/list-img-2.jpg" )
+								img(src="assets/images/content/list-img-2.jpg", alt="")
+							a.partner__images-link.partner__images-link_stamp.partner__images-link_height(href="assets/images/content/list-img-3.jpg" )
+								img(src="assets/images/content/list-img-3.jpg", alt="")
+
+						.partner__content
+							.partner__city Россия, Абаза
+							.partner__text
+								.partner__text-title Описание:
+								p Etiam auctor tincidunt purus non gravida. Curabitur ut massa eros. Curabitur nibh dolor, facilisis vitae dignissim a, congue eu justo. Fusce accumsan blandit mi, eu euismod orci vestibulum non. Suspendisse imperdiet, urna eget viverra malesuada, lectus urna finibus sem, sed dignissim nisl arcu porttitor enim. Proin nec metus justo. Etiam blandit, ante et dignissim scelerisque, purus eros vulputate dui, sed dictum velit arcu rutrum magna. Nullam nisi lectus, placerat eu volutpat vitae, accumsan sed lacus. In interdum aliquam enim sit amet ultricies.
+					.partner__cond
+						.partner__cond-title Спец. условия:
+						ul.partner__cond-list
+							li.partner__cond-item Nulla rutrum nulla in urna pulvinar
+							li.partner__cond-item Sed id semper massa, ut consequat turpis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+
+
+					.partner__hotdeal Горячее предложение:
+						span
+							i скидка 10%
+							| на все товары
+
+					.partner__team
+						.partner__team-photo
+							a.partner__team-link(href="assets/images/content/team-1.jpg")
+								img(src="assets/images/content/team-1.jpg", alt="")
+
+						dl.partner__team-list
+							.partner__team-w
+								dt.partner__team-term Основатель:
+								dd.partner__team-desc Иван Иванович Иванов
+
+							.partner__team-w
+								dt.partner__team-term Должность:
+								dd.partner__team-desc защитник
+
+							.partner__team-w
+								dt.partner__team-term Команда:
+								dd.partner__team-desc Нью-Орлеан Пеликанс

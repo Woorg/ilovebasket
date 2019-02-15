@@ -3,13 +3,24 @@
 		@extends .in
 		padding-top $pV
 		padding-bottom $pV
-		text-align center	
+		text-align center
+		+r($t)
+			padding-top 20px
+			padding-bottom 20px
 	&__title
 		margin-bottom 25px
-	// &__list
 
 	&__item
+		position relative
 		padding-bottom 27px
+
+	&__link
+		position absolute
+		z-index 1
+		top 0
+		right 0
+		bottom 0
+		left 0
 
 	&__partner
 		position relative
@@ -28,7 +39,8 @@
 		letter-spacing 0.24px
 		line-height 1.68
 		text-transform uppercase
-
+		+r($t)
+			font-size 16px
 	&__text
 		padding-top 30px
 		margin-bottom 30px
@@ -37,7 +49,9 @@
 		font-family $pS
 		font-weight 600
 		letter-spacing 0.3px
-		span 
+		+r($t)
+			font-size 18px
+		span
 			font-family $pBl
 			font-weight 900
 	&__button
@@ -51,15 +65,20 @@
 	&__arrow
 		width 16px
 		height 32px
+		+r($t)
+			width 13px
+			height 25px
 		&:before
 			display none
 	.slick-next,
 	&__next
-		right 30px
+		right 0
+		top calc(50% - 40px)
 	.slick-prev,
 	&__prev
 		z-index 1
-		left 30px
+		left 0
+		top calc(50% - 40px)
 		transform rotate(180deg)
 
 	.slick-dots

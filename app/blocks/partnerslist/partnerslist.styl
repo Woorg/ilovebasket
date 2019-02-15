@@ -1,0 +1,243 @@
+.partnerslist
+	&__in
+		@extends .in
+		padding-top $pV
+		padding-bottom $pV
+		+r($t)
+			padding-top 20px
+			padding-bottom 20px
+	&__title
+		margin-bottom 19px
+		text-align center
+
+	&__form
+		margin auto
+		margin-bottom 32px
+		max-width 380px
+	&__partner
+		margin-bottom 24px
+
+.partner
+	padding 40px
+	min-height 756px
+	background-color #ffffff
+	border-radius 4px
+	box-shadow 0 8px 16px rgba(120, 119, 119, 0.24)
+	+r($t)
+		padding 20px
+	&__top
+		padding-bottom 36px
+		text-align center
+
+	&__brand
+		display flex
+		justify-content center
+		align-items center
+	&__brand-logo
+		margin-right 18px
+	&__brand-text
+		opacity 0.95
+		font-family $pS
+		font-weight 600
+		letter-spacing 0.24px
+		text-transform uppercase
+		+r($t)
+			font-size 16px
+
+	&__w
+		// overflow hidden
+		display flex
+		justify-content flex-start
+		+r($t)
+			flex-wrap wrap
+	&__images
+		max-width 420px
+		flex 1 0 420px
+		max-height 280px
+		+r($t)
+			margin-bottom 20px
+		+r($m)
+			max-width 100%
+			// max-height 180px
+		// +r($m)
+		// 	max-height 280px
+	.gutter-sizer
+		width 3.5%
+		+r($m)
+			width 8px
+
+	
+
+	&__images-link
+		font-size 0
+		float left
+		+r($m)
+			// margin-bottom 8px
+			width 144px
+		&:last-child
+			margin-right 0
+		img
+			respimg()
+			box-shadow 0 8px 16px rgba(120, 119, 119, 0.24)
+	
+	&__images-link_stamp
+		// position absolute
+		// top 0
+		// right 0
+		+r($m)
+			width 92px
+			height 156px
+			
+	
+	&__content
+		margin-left 30px
+		// max-width 620px
+		// width 58.4905660377358%
+		display flex
+		flex-direction column
+		// flex-grow 1
+		+r($t)
+			margin-left 0
+	&__city,
+	&__text-title,
+	&__cond-title
+		color #313131
+		font-family $pS
+		font-weight 600
+		letter-spacing 0.1px
+		+r($t)
+			font-size 14px		
+
+	&__city
+		margin-bottom 12px
+	&__text
+		margin-top auto
+		letter-spacing 0.1px
+		line-height 1.75
+		+r($t)
+			font-size 12px
+		p
+			opacity .8	
+	&__text-title
+		margin-bottom 4px
+		font-family $pS
+		font-weight 600
+		letter-spacing 0.1px
+
+	&__cond
+		margin-top 16px
+		margin-bottom 24px
+	&__cond-title
+		margin-bottom 4px
+
+	&__cond-list
+		margin-left 18px
+		opacity 0.8
+		color #313131
+		font-size 16px
+		line-height 1.75
+		letter-spacing 0.1px
+		+r($t)
+			margin-left 10px
+			font-size 12px
+
+
+	&__cond-item
+		position relative
+		padding-left 22px
+		+r($t)
+			padding-left 10px
+		&:after
+			position absolute
+			top 50%
+			left 0
+			content ''
+			width 3px
+			height 3px
+			background #313131
+			opacity 0.8
+			border-radius 50%
+			transform translateY(-50%)
+
+	&__hotdeal
+		position relative
+		margin-bottom 25px
+		padding-top 10px
+		padding-bottom 10px
+		opacity 0.95
+		font-family $pS
+		font-size 19px
+		letter-spacing 0.3px
+		line-height 1.68421052631579
+		text-align center
+		+r($t)
+			padding-top 5px
+			padding-bottom 5px
+			font-size 18px
+			line-height 1.4
+		&:after,
+		&:before
+			position absolute
+			left 50%
+			width 80px
+			height 2px
+			content ''
+			background-color #ec5b1c
+			transform translateX(-50%)
+		&:after
+			top 0
+		&:before
+			top 100%
+
+		span
+			padding-left 5px
+			color #c32530
+			font-size 24px
+			font-weight 600
+			+r($t)
+				display block
+				font-size 18px
+		i
+			padding-left 5px
+			padding-right 5px
+			font-family $pBl
+			font-weight 900
+
+
+	&__team
+		display flex
+		flex-flow row wrap
+
+	&__team-photo
+		+r($m)
+			margin auto
+			margin-bottom 20px
+
+		img
+			display block
+			respimg()
+			box-shadow 0 8px 16px rgba(120, 119, 119, 0.24)
+	&__team-link
+		text-decoration none
+		color inherit
+
+	&__team-list
+		margin-left 30px
+		+r($m)
+			margin-left 0
+	&__team-w
+		margin-bottom 6px
+		display flex
+		font-size 16px
+		letter-spacing 0.1px
+		line-height 1.75
+		+r($t)
+			font-size 14px
+	&__team-term
+		margin-right 8px
+		opacity .8
+	&__team-desc
+		font-family $pS
+		font-weight 600
+
+

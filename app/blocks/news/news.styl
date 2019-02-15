@@ -1,2 +1,66 @@
 .news
-	display block
+	&__in
+		@extends .in
+		padding-top $pV
+		padding-bottom $pV - 30px
+		text-align center
+		+r($t)
+			padding-top 20px
+			padding-bottom 20px
+
+	&__title
+		margin-bottom 19px
+
+	&__list
+		margin-left -15px
+		margin-right -15px
+		max-height 1226px
+		display flex
+		flex-wrap wrap
+		flex-direction column
+		+r($tM)
+			max-height 100%
+			flex-direction row
+			justify-content center
+		+r($t)
+			align-items flex-start
+			// justify-content flex-start
+	&__item
+		margin-bottom 30px
+		margin-left 15px
+		margin-right 15px
+		width 29.9%
+		box-shadow 0 8px 16px rgba(120, 119, 119, 0.24)
+		background-color #ffffff
+		opacity 0.95
+		font-family $pS
+		font-size 24px
+		font-weight 600
+		letter-spacing 0.3px
+		line-height 1.333
+		+r($tM)
+			width 29%
+		+r($t)
+			width 29%
+		+r(709px)
+			width auto
+
+	&__link
+		display block
+		color inherit
+		text-decoration none
+
+	&__image
+		overflow hidden
+		font-size 0
+		img
+			respimg()
+
+	&__text
+		padding 15px
+		+r($t)
+			font-size 16px
+
+
+.news_second
+	background-color #f4f4f4

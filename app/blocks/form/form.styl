@@ -3,13 +3,19 @@
 	&__row
 		margin-bottom 24px
 		display flex
+		+r($t)
+			margin-bottom 0
+			flex-wrap wrap
 		&:last-child
 			margin-bottom 0
 		
 	&__field
 		flex 1 1 370px
+		+r($t)
+			margin-bottom 10px
 		input,
-		textarea
+		textarea,
+		select
 			padding-top 16px
 			padding-right 15px
 			padding-bottom 16px
@@ -25,15 +31,44 @@
 			letter-spacing 0.1px
 			+placeholder()
 				opacity 1
-
+			+r($t)
+				padding-top 13px
+				padding-bottom 13px
+				font-size 12px
+		select
+			opacity 1
+			color #313131
+			font-family $pS
+			appearance none
+			+r($t)
+				font-size 14px
+		
 	&__field_num
 		margin-left 24px
 		flex-basis 96px
+		+r($t)
+			margin-left 0
+			flex-grow 0 
 	&__field_message
 		textarea
 			min-height 150px
 
-
+	&__field_select
+		position relative
+		&:after
+			position absolute
+			top calc(50% + 10px)
+			right 15px
+			content ''
+			width 0
+			height 0
+			border-style solid
+			border-width 12px 8.5px 0 8.5px
+			border-color #031313 transparent transparent transparent
+			transform translateY(-50%)
+			pointer-events none
+			+r($t)
+				border-width 10px 7px 0 7px
 	&__label
 		cursor pointer
 	&__label-text
@@ -41,6 +76,8 @@
 		font-size 16px
 		font-weight 400
 		letter-spacing 0.1px
+		+r($t)
+			font-size 14px
 		span 
 			padding-left 3px
 			color #ced4da
@@ -48,3 +85,5 @@
 	&__submit
 		margin auto
 		width 240px
+		+r($t)
+			margin-top 10px

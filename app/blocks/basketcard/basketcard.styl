@@ -6,12 +6,16 @@
 		padding-top 64px
 		padding-bottom 64px
 		display flex
-		flex-flow row wrap
+		flex-flow row nowrap
 		align-items center
 		color #fff
+		+r($t)
+			flex-wrap wrap
 	&__content
 		max-width 475px
 		width 100%
+		+r($t)
+			margin-bottom 50px
 	&__title
 		margin-bottom 23px
 	&__text
@@ -19,6 +23,9 @@
 		font-size 24px
 		letter-spacing 0.26px
 		line-height 1.333
+		+r($tM)
+			font-size 16px
+			letter-spacing 0.17px
 	&__image
 		max-width 665px
 		width 100%

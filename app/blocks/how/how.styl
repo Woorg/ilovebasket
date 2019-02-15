@@ -7,6 +7,9 @@
 		padding-top $pV
 		padding-bottom $pV
 		text-align center
+		+r($t)
+			padding-top 20px
+			padding-bottom 30px
 	&__title
 		margin-bottom 19px
 	&__text,
@@ -22,14 +25,19 @@
 		font-weight 600
 		letter-spacing 0.3px
 		line-height 1.333
+		+r($t)
+			font-size 16px
 		a
 			color #108cdf
+			text-decoration none
 
 	&__note
 		font-size 16px
 		font-weight 400
 		letter-spacing 0.17px
 		line-height 1.5
+		+r($t)
+			font-size 12px
 		span,
 		strong
 			font-weight 700

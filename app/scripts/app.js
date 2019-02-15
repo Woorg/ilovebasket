@@ -2,8 +2,9 @@ import svg4everybody from 'svg4everybody';
 import $ from 'jquery';
 import slick from 'slick-carousel';
 // import Swup from 'swup';
-// import LazyLoad from "vanilla-lazyload";
-import 'magnific-popup';
+// import 'magnific-popup';
+import packery from 'packery/dist/packery.pkgd.js';
+import imagesLoaded from 'imagesloaded/imagesloaded.pkgd.min.js';
 
 
 (function ($) {
@@ -21,13 +22,58 @@ import 'magnific-popup';
 			'box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.2) inset, 0 5px 3px -5px rgba(0, 0, 0, 0.5), 0 -13px 5px -10px rgba(255, 255, 255, 0.4) inset',
 			'line-height: 1.56',
 			'text-align: left',
-			'font-size: 18px',
+			'font-size: 16px',
 			'font-weight: 400'
 		].join(';');
 
 		console.log('%c developed by igor gorlov https://webjeb.ru', styles);
 
-			var $testimonials = $('.testimonials__list'); 
+
+			var $gridContainer = $('.partner__images');
+
+			if ( $gridContainer.length ) {
+				$gridContainer.packery({
+					// options
+					itemSelector: '.partner__images-link',
+					gutter: '.gutter-sizer',
+					percentPosition: true,
+					horizontal: false,
+					resize: true,
+					// stamp: '.partner__images-link_stamp'
+				  });
+
+			}
+					
+
+
+
+			// slider
+			var $slick_slider = $('.steps__list');
+			var settings_slider = {
+				dots: true,
+				arrows: false,
+				slidesToShow: 1,
+				// more settings
+			}
+			slick_on_mobile( $slick_slider, settings_slider);
+
+			// slick on mobile
+			function slick_on_mobile(slider, settings){
+				$(window).on('load resize', function() {
+				if ($(window).width() > 991) {
+					if (slider.hasClass('slick-initialized')) {
+					slider.slick('unslick');
+					}
+					return
+				}
+				if (!slider.hasClass('slick-initialized')) {
+					return slider.slick(settings);
+				}
+				});
+			};
+
+
+			var $testimonials = $('.testimonials__list');
 
 			if( $testimonials.length ) {
 				$testimonials.slick({
@@ -42,10 +88,20 @@ import 'magnific-popup';
 					adaptiveHeight: true,
 					// variableWidth: true,
 					dots: true,
+					responsive: [
+						{
+						  breakpoint: 768,
+						  settings: {
+							slidesToShow: 1,
+							dots: true,
+							arrows: true
+						  }
+						}
+					]
 				});
 			}
 
-			var $partners = $('.partners__list'); 
+			var $partners = $('.partners__list');
 
 			if( $partners.length ) {
 				$partners.slick({
@@ -58,10 +114,26 @@ import 'magnific-popup';
 					adaptiveHeight: true,
 					// variableWidth: true,
 					dots: true,
+					responsive: [
+						{
+							breakpoint: 991,
+							settings: {
+							  slidesToShow: 3,
+							  dots: true,
+							  arrows: true
+							}
+						},
+						{
+						  breakpoint: 768,
+						  settings: {
+							slidesToShow: 1,
+							dots: true,
+							arrows: true
+						  }
+						}
+					]
 				});
 			}
-
-
 
 
 			// Magnific

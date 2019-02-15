@@ -3,16 +3,15 @@
 		@extends .in
 		padding-top $pV
 		padding-bottom $pV
+		+r($t)
+			padding-top 20px
+			padding-bottom 20px
 
 	&__title
 		margin-bottom 19px
-		// margin-bottom 38px
 		text-align center
-
-	// &__list
-	// 	display flex
-	// 	flex-flow row
-
+		+r($t)
+			margin-bottom 10px
 	&__item
 		position relative
 		padding-top 40px
@@ -23,21 +22,29 @@
 		box-shadow 0 8px 16px rgba(120, 119, 119, 0.24)
 		border-radius 4px
 		transform scale(1)
+		+r($t)
+			padding-top 20px
+			padding-right 20px
+			padding-bottom 20px
+			padding-left 20px
+			text-align left
 	&__link
 		text-decoration none
 		color inherit
 
-	// .slick-list
-	// 	min-height 429px
-
 	.slick-slide
 		position relative
-		// margin-top 38px
 		padding-top 38px
 		padding-bottom 38px
 		width 426px
+		+r($t)
+			margin-left 10px
+			margin-right 10px
+			padding-top 0
+			padding-bottom 30px
+			width auto
+			text-align center
 		.testimonials__item
-			// height 223px
 			filter blur(2px)
 			transform scale(.9)
 			tr(transform .3s ease)
@@ -46,20 +53,26 @@
 		.testimonials__item
 			position absolute
 			z-index 1
-
 			top 0
-			left -46px
 			left 50%
-			// right -46px
 			width 570px !important
 			transform scale(1) translateX(-50%)
 			filter blur(0)
 			tr(transform .3s ease)
+			+r($t)
+				position static
+				width auto !important
+				transform none
+			+r($m)
+				z-index 0
 
-			.testimonials__top
+
+			.testimonials__top	
 				position relative
 				margin-bottom 18px
 				font-family $pS
+				+r($t)
+					margin-bottom 10px
 			.testimonials__item-title
 				margin-bottom 3px
 				color #313131
@@ -67,6 +80,9 @@
 				font-weight 600
 				letter-spacing 0.3px
 				line-height 1.333
+				+r($t)
+					font-size 18px
+					letter-spacing 0.23px
 			.testimonials__date
 				position absolute
 				top 8px
@@ -75,8 +91,15 @@
 				font-weight 600
 				letter-spacing 0.15px
 				line-height 1.333
+				+r($t)
+					font-size 10px
+					letter-spacing 0.13px
 			.testimonials__text
 				max-height 140px
+				+r($t)
+					max-height 100%
+					font-size 12px
+					letter-spacing 0.08px
 
 
 	&__text
@@ -87,11 +110,16 @@
 		font-weight 400
 		letter-spacing 0.1px
 		line-height 1.75
-
+		+r($t)
+			max-height 100%
+			font-size 12px
+			letter-spacing 0.08px
 	&__top
 		position relative
 		margin-bottom 18px
 		font-family $pS
+		+r($t)
+			margin-bottom 10px
 	&__item-title
 		margin-bottom 3px
 		color #313131
@@ -99,16 +127,21 @@
 		font-weight 600
 		letter-spacing 0.3px
 		line-height 1.333
+		+r($t)
+			font-size 18px
+			letter-spacing 0.23px
 	&__date
 		position absolute
 		top 8px
 		right 0
+		opacity 0.5
 		font-size 12px
 		font-weight 600
 		letter-spacing 0.15px
 		line-height 1.333
-	// &__rating
-
+		+r($t)
+			font-size 10px
+			letter-spacing 0.13px
 
 	&__text
 		opacity 0.8
@@ -117,22 +150,41 @@
 		letter-spacing 0.1px
 		line-height 1.75
 
+
 	.slick-arrow,
 	&__arrow
 		width 16px
 		height 32px
+		+r($t)
+			width 13px
+			height 25px
 		&:before
 			display none
 	.slick-next,
 	&__next
 		right 30px
+		+r($t)
+			right 10px
+			transform  translateY(100%)
 	.slick-prev,
 	&__prev
 		z-index 1
 		left 30px
-		transform rotate(180deg)
+		transform rotate(180deg) 
+		+r($t)
+			left 10px
+			transform  translateY(100%) rotate(-180deg) 
+
+	.slick-arrow
+		+r($t)
+			z-index 2
+			top calc(100% - 28px)
+
 
 	.slick-dots
+		+r($t)
+			top 100%
+			bottom auto
 		li
 			position relative
 			border 1px solid transparent
@@ -157,23 +209,22 @@
 			&.slick-active
 				border 1px solid #ec5b1c
 				background #fff
-
 				button
 					border 3px solid #fff
 					width 16px
 					height 16px
 					background-color #ec5b1c
 					opacity 1
+
 .rating
 	display flex
-	flex-flow row 
+	flex-flow row
 	justify-content flex-start
 	align-items center
 	&__star
 		margin-right 16px
 		width 16px
 		height 15px
-		// opacity 0.5
 	&__num
 		margin-left 8px
 		color #ec5b1c

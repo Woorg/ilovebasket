@@ -3,18 +3,31 @@ mixin form()
 		.form__row
 			.form__field
 				label.form__label
-					.form__label-text Название сервиса
+					span.form__label-text Название сервиса
 					input(type="text", value="", placeholder="Введите Название сервиса")
 			.form__field.form__field_num
 				label.form__label
-					.form__label-text Оценка
+					span.form__label-text Оценка
 						span (1-10)
 					input(type="text", value="", placeholder="00.00")
 
 		.form__row
 			.form__field.form__field_message
 				label.form__label
-					.form__label-text Комментарий
-					textarea(value="", placeholder="Введите Ваш комментарий")
+					span.form__label-text Комментарий
+					textarea( placeholder="Введите Ваш комментарий")
 
 		button.form__submit.button.button_form(type="submit", value="Отправить")
+
+	
+mixin form-select()
+	form.form&attributes(attributes)
+		.form__field.form__field_select
+			label.form__label
+				span.form__label-text Показать
+				select(name="city")
+					option(value="Все города") Все города
+					option(value="Москва") Москва
+					option(value="Piter") Piter
+			
+
