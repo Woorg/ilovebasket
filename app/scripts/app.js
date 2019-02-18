@@ -42,10 +42,6 @@ import imagesLoaded from 'imagesloaded/imagesloaded.pkgd.min.js';
 					// stamp: '.partner__images-link_stamp'
 				  });
 			}
-					
-
-			
-
 
 			var $testimonials = $('.testimonials__list');
 
@@ -116,11 +112,11 @@ import imagesLoaded from 'imagesloaded/imagesloaded.pkgd.min.js';
 				arrows: false,
 				fade: true,
 				slidesToShow: 1,
-				initialSlide: 0,
+				// initialSlide: 0,
 				adaptiveHeight: true
 				// more settings
 			}
-			
+
 			// slick on mobile
 			function slick_on_mobile(slider, settings){
 				$(window).on('load resize', function() {

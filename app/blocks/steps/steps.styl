@@ -10,13 +10,18 @@
 		display flex
 		justify-content center
 		align-items flex-start
-		flex-flow row wrap
+		flex-direction row
+		flex-wrap wrap
 		counter-reset step
-		
+
 	&__step
+		margin auto
+		display block !important
 		max-width 285px
 		width 100%
+		flex 1 1 285px
 		+r($tM)
+			padding-bottom 20px
 			text-align left
 
 	.slick-current
